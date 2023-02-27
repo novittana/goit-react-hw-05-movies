@@ -15,7 +15,7 @@ export default function HomePage() {
       .then(data => {
         setResults(data.results);
       })
-      .catch(error => {})
+      .catch(error => { console.log(error);})
       .finally(() => {
         setIsLoading(false);
       });

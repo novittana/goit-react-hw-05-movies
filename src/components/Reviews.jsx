@@ -16,7 +16,9 @@ export default function Reviews() {
       .then(data => {
         setReviews(data.results);
       })
-      .catch(error => {})
+      .catch(error => {
+        console.log(error);
+      })
       .finally(() => {
         setIsLoading(false);
       });

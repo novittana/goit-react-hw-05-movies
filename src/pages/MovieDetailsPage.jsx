@@ -14,7 +14,7 @@ export default function MovieDetailsPage() {
 
   const [fullInfo, setfullInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+ 
 
   useEffect(() => {
     setIsLoading(true);
@@ -22,9 +22,7 @@ export default function MovieDetailsPage() {
       .then(fullInfo => {
         setfullInfo(fullInfo);
       })
-      .catch(error => {
-        setError(error.message);
-      })
+      .catch(error => { console.log(error);})
       .finally(() => {
         setIsLoading(false);
       });
